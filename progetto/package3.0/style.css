@@ -1,0 +1,16 @@
+.main {
+    border: 1px solid #FF0000;
+	position: absolute;
+    top: 30%;
+	left: 40%;
+	width: 300px;
+	height: 200px;
+}
+
+.scritta {
+	margin-left: 60px;
+}
+
+.bottone {
+	float: right;
+}
