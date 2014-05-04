@@ -1,0 +1,313 @@
+<html>
+	<head>
+		<title> Tris </title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript">
+			var cellacpu=0;
+			var mossa=0;
+			var utente=0;
+			var punticpu=0;
+			var end=false;
+			punti=new Array();
+			for(i=0;i<9;i++)
+				punti[i]=2;
+			function giocata(nbottone) {
+				switch(nbottone) {
+					case 1: document.tris.a.disabled=true;
+							document.tris.a.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 2: document.tris.b.disabled=true;
+							document.tris.b.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;			
+								controllo();
+							}
+						break;
+					case 3: document.tris.c.disabled=true;
+							document.tris.c.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 4: document.tris.d.disabled=true;
+							document.tris.d.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 5:	document.tris.e.disabled=true;
+							document.tris.e.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 6: document.tris.f.disabled=true;
+							document.tris.f.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 7: document.tris.g.disabled=true;
+							document.tris.g.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 8: document.tris.h.disabled=true;
+							document.tris.h.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+					case 9: document.tris.i.disabled=true;
+							document.tris.i.value="O";
+							mossa=mossa+1;
+							punti[(nbottone-1)]=1;
+							controllo();
+							if((mossa<8) && (!(end))) {
+								cpu();
+								punti[(cellacpu-1)]=0;
+								controllo();
+							}
+						break;
+				}
+			}
+			
+			function cpu() {
+				fine=false;
+				while(!fine) {
+					cellacpu=Math.floor((Math.random()*9)+1);
+					switch(cellacpu) {
+						case 1: if(document.tris.a.disabled==false) {
+								document.tris.a.disabled=true;
+								document.tris.a.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+						case 2: if(document.tris.b.disabled==false) {
+								document.tris.b.disabled=true;
+								document.tris.b.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 3: if(document.tris.c.disabled==false) {
+								document.tris.c.disabled=true;
+								document.tris.c.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 4: if(document.tris.d.disabled==false) {
+								document.tris.d.disabled=true;
+								document.tris.d.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 5: if(document.tris.e.disabled==false) {
+								document.tris.e.disabled=true;
+								document.tris.e.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 6: if(document.tris.f.disabled==false) {
+								document.tris.f.disabled=true;
+								document.tris.f.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 7: if(document.tris.g.disabled==false) {
+								document.tris.g.disabled=true;
+								document.tris.g.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 8: if(document.tris.h.disabled==false) {
+								document.tris.h.disabled=true;
+								document.tris.h.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+ 						case 9: if(document.tris.i.disabled==false) {
+								document.tris.i.disabled=true;
+								document.tris.i.value="X";
+								mossa=mossa+1;
+								fine=true;
+							}
+							break;
+					}
+				}		
+			}
+			
+			function controllo() {
+				if((punti[0]==1 && punti[1]==1 && punti[2]==1) ||
+				(punti[0]==1 && punti[3]==1 && punti[6]==1) ||
+				(punti[0]==1 && punti[4]==1 && punti[8]==1) ||
+				(punti[1]==1 && punti[4]==1 && punti[7]==1) ||
+				(punti[2]==1 && punti[5]==1 && punti[8]==1) ||
+				(punti[2]==1 && punti[4]==1 && punti[6]==1) ||
+				(punti[3]==1 && punti[4]==1 && punti[5]==1) ||
+			    (punti[6]==1 && punti[7]==1 && punti[8]==1)) {   
+					alert("Hai vinto!");
+				   	disabilita();
+				   	utente=utente+1;
+				   	document.tris.ut.value=utente;
+					end=true;
+				}
+				else if((punti[0]==0 && punti[1]==0 && punti[2]==0) || 
+				(punti[0]==0 && punti[3]==0 && punti[6]==0) || 
+				(punti[0]==0 && punti[4]==0 && punti[8]==0) || 
+				(punti[1]==0 && punti[4]==0 && punti[7]==0) || 
+				(punti[2]==0 && punti[5]==0 && punti[8]==0) || 
+				(punti[2]==0 && punti[4]==0 && punti[6]==0) || 
+				(punti[3]==0 && punti[4]==0 && punti[5]==0) || 
+				(punti[6]==0 && punti[7]==0 && punti[8]==0)) {
+					alert("Hai perso!");
+					disabilita();
+					punticpu=punticpu+1;
+					document.tris.computer.value=punticpu;
+					end=true;
+				}
+				else if(mossa==9) {
+					alert("Pareggio");
+					disabilita();
+					end=true;
+				}
+			}
+			
+			function disabilita() {
+				document.tris.a.disabled=true;
+				document.tris.b.disabled=true;
+				document.tris.c.disabled=true;
+				document.tris.d.disabled=true;
+				document.tris.e.disabled=true;
+				document.tris.f.disabled=true;
+				document.tris.g.disabled=true;
+				document.tris.h.disabled=true;
+				document.tris.i.disabled=true;
+			}
+			
+			function ricomincia() {
+				document.tris.a.disabled=false;
+				document.tris.b.disabled=false;
+				document.tris.c.disabled=false;
+				document.tris.d.disabled=false;
+				document.tris.e.disabled=false;
+				document.tris.f.disabled=false;
+				document.tris.g.disabled=false;
+				document.tris.h.disabled=false;
+				document.tris.i.disabled=false;
+				document.tris.a.value="";
+				document.tris.b.value="";
+				document.tris.c.value="";
+				document.tris.d.value="";
+				document.tris.e.value="";
+				document.tris.f.value="";
+				document.tris.g.value="";
+				document.tris.h.value="";
+				document.tris.i.value="";
+				for(i=0;i<punti.length;i++)
+					punti[i]=2;
+				mossa=0;
+				cellacpu=0;
+				nbottone=0;
+				utente=eval(document.tris.ut.value);
+				punticpu=eval(document.tris.computer.value);
+				end=false;
+			}
+			
+			function conoscimi() {
+				alert("Send us your feedback and possible improvments at info@informacomputer.it");
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form name="tris" autocomplete="off">
+			<table class="larga" bgcolor="#99FFFF">
+				<tr>
+					<td><input type="button" value="KnowMe" Onclick="conoscimi();"></td>
+					<td width="90%"><h1> Tris </h1></td>
+					<td><input type="button" value="NewGame" Onclick="ricomincia();"></td>
+				</tr>
+			</table>
+			<table class="intera" align="center">
+				<tr>
+					<td> <input type="button" class="tasto" name="a" OnClick="giocata(1);"> </td>
+					<td> <input type="button" class="tasto" name="b" OnClick="giocata(2);"> </td>
+					<td> <input type="button" class="tasto" name="c" OnClick="giocata(3);"> </td>
+				</tr>
+				<tr>
+					<td> <input type="button" class="tasto" name="d" OnClick="giocata(4);"> </td>
+					<td> <input type="button" class="tasto" name="e" OnClick="giocata(5);"> </td>
+					<td> <input type="button" class="tasto" name="f" OnClick="giocata(6);"> </td>
+				</tr>
+				<tr>
+		            <td> <input type="button" class="tasto" name="g" OnClick="giocata(7);"> </td>
+		            <td> <input type="button" class="tasto" name="h" OnClick="giocata(8);"> </td>
+					<td> <input type="button" class="tasto" name="i" OnClick="giocata(9);"> </td>
+		        </tr>
+			</table>
+			<table class="larga" bgcolor="#99FFFF">
+				<tr>
+					<td width="80%">
+						<label for="ut">User </label>
+						<input type="text" name="ut" value="0" size="2" disabled>
+					</td>
+					<td>
+						<label for="computer">Cpu </label>
+						<input type="text" name="computer" value="0" size="2" disabled>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
