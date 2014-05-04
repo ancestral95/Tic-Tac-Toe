@@ -1,0 +1,17 @@
+{
+  "name": "Tris",
+  "description": "Tic Tac Toe version 2",
+  "launch_path": "/tris.html",
+  "version": "2.5",
+  "icons": {
+    "60": "/icona.ico",
+	"90": "/icon90.jpg",
+	"128": "/icon.ico"
+  },
+  "developer": {
+    "name": "Informacomputer",
+    "url": "http://informacomputer.it"
+  },
+  "default_locale": "it",
+  "chrome": { "navigation": true }
+}
