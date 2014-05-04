@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Main</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript">
+			function avvia() {
+				switch(document.menu.livello.options[document.menu.livello.selectedIndex].value) {
+					case "facile": javascript:location.href="pages/facile.html";
+								break;
+					case "medio": javascript:location.href="pages/medio.html";
+								break;
+					case "difficile": javascript:location.href="pages/difficile.html";
+								break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="menu" autocomplete="off">
+			<div class="main">
+				<h3 align="center">Benvenuto</h3>
+				<br/>
+				<b class="scritta">Quanto sei forte?</b>
+				<select name="livello">
+					<option value="facile" selected>facile</option>
+					<option value="medio">medio</option>
+					<option value="difficile">difficile</option>
+				</select>
+				<br/><br/><br/><br/>
+				<input type="button" class="bottone" value="Gioca" Onclick="avvia();">
+			</div>
+		</form>
+	</body>
+</html>
